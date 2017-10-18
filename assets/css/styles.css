@@ -1,0 +1,199 @@
+::selection {
+  background: #2980b9;
+  color: #FFFFFF;
+}
+
+::-moz-selection {
+  background: #2980b9;
+  color: #FFFFFF;
+}
+
+body {
+  background-color: #000;
+  color: #6b7990;
+  font-family: -apple-system, system-ui, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+a {
+  color: #2980b9;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+  color: #55a5d9;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color: #243759;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+ul, ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+blockquote {
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-family: 'Merriweather', serif;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-left: -0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  display: inline;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.feature-panel {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 320px;
+  background-color: #222;
+  background-image: url("../img/hero_bg.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.main-panel {
+  position: relative;
+  background-color: #fff;
+  min-height: calc(100vh - 320px);
+  margin: 320px auto 0 auto;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 -4px 8px 0 rgba(0,0,0,0.1);
+}
+
+.main-panel-content {
+  max-width: 580px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.profile {
+  border-radius: 100%;
+}
+
+.intro:before {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 3px;
+  background-color: #ebebeb;
+  margin-bottom: 2rem;
+}
+
+.social-links {
+  margin-top: 3rem;
+}
+
+.social-links li {
+  display: inline-block;
+  color: #90A1B8;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin: 0 1rem 0 0;
+}
+
+.social-links li a {
+  color: #A8B7B4;
+  opacity: 1;
+}
+
+.social-links a:hover {
+  opacity: 0.6;
+}
+
+@media (min-width: 768px) {
+  @keyframes slide { from { transform: translateX(0); } to { transform: translateX(0); } }
+}
+
+@media (min-width: 1024px) {
+
+  .feature-panel {
+    height: 100vh;
+  }
+
+  .main-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-height: calc(100vh - 96px);
+    margin-top: 0;
+    max-width: 580px;
+    padding: 3rem;
+    box-shadow: -4px 0 8px 0 rgba(0,0,0,0.1);
+  }
+
+  .main-panel-content {
+    padding: 1rem 2rem;
+  }
+
+  .main-panel-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .main-panel-content p {
+    font-size: 1.125rem;
+    line-height: 1.575;
+  }
+
+  @keyframes slide { from { transform: translateX(100%); } to { transform: translateX(0); } }
+
+}
+
+@media (min-width: 1140px) {
+
+  .main-panel {
+    max-width: 680px;
+  }
+
+}
+
+.slide-in {
+  opacity: 1;
+  animation: slide cubic-bezier(.09,1.03,.26,1);
+  animation-duration: 1000ms;
+}
+
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity: 0;  /* make things invisible upon start */
+  animation: fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  animation-fill-mode: forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  animation-duration: 500ms;
+  animation-delay: 500ms;
+}
