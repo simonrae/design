@@ -77,9 +77,9 @@ blockquote p {
   width: 100%;
   height: 320px;
   background-color: #222;
-  background-image: url("../img/hero_bg.jpg");
+  background-image: url("../img/srae_bg.jpg");
   background-size: cover;
-  background-position: 50% 50%;
+  background-position: 0 50%;
   background-repeat: no-repeat;
   z-index: -1;
 }
@@ -144,6 +144,7 @@ blockquote p {
 
   .feature-panel {
     height: 100vh;
+    background-position: 50% 50%;
   }
 
   .main-panel {
